@@ -1,0 +1,322 @@
+/* ============ global styles ============ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(243, 87%, 12%);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+a {
+  color: #3da08f;
+}
+
+button {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.15em;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.flex > div,
+.flex > ul {
+  flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 20px;
+}
+
+.flex > div:last-child {
+  margin-left: 20px;
+}
+
+/* ============ navbar ============ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 50px;
+}
+
+nav ul li a {
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+  text-decoration: none;
+}
+
+/* ============ forms ============ */
+form {
+  display: flex;
+}
+
+input {
+  font-family: "Raleway", sans-serif;
+  border: 1px solid hsl(243, 87%, 12%);
+  border-radius: 2px;
+  padding: 15px;
+  flex: 0.55;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: hsl(0, 0%, 75%);
+}
+
+button {
+  background-color: hsl(224, 93%, 58%);
+  color: #fff;
+  border: 1px solid hsl(224, 93%, 58%);
+  border-radius: 2px;
+  margin-left: 15px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  flex: 0.3;
+}
+
+/* ============ light-blue section ============ */
+.light-blue {
+  background-color: hsl(240, 75%, 98%);
+  margin-top: 100px;
+  padding: 50px 0;
+  position: relative;
+}
+.light-blue::before {
+  content: "";
+  background-image: url(./images/bg-curve-desktop.svg);
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  height: 70px;
+  width: 100%;
+}
+
+.testimonial-box {
+  background-color: #fff;
+  padding: 25px;
+  margin-top: 40px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.testimonial-box p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.user-info {
+  display: flex;
+  margin-top: 20px;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* ============ blue section ============ */
+.blue {
+  background-color: hsl(238, 22%, 44%);
+  color: #fff;
+  padding: 50px 0;
+}
+
+.blue form {
+  flex-direction: column;
+}
+
+.blue form input {
+  flex: 1;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blue form button {
+  border-radius: 2px;
+  margin: 20px 0 0;
+  width: 50%;
+}
+
+/* ============ footer ============ */
+footer {
+  background-color: hsl(243, 87%, 12%);
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 20px;
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .circle {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: right;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ============ media queries ============ */
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  nav ul {
+      margin-top: 30px;      
+      margin-bottom: 0px;
+  }
+    
+  nav ul li {
+    margin-left: 10px 20px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex > div {
+    width: 100%;
+  }
+
+  .flex > div:first-child {
+    margin-right: 0;
+  }
+
+  .flex > div:last-child {
+    margin-left: 0;
+  }
+
+  footer ul {
+    padding: 0;
+    width: 100%;
+  }
+
+  .light-blue::before {
+    background-image: url(./images/bg-curve-mobile.svg);
+    height: 80px;
+  }
+
+  .testimonial-box {
+    width: 100%;
+  }
+
+  .blue form {
+    flex-direction: column;
+  }
+
+  .blue form input {
+    flex: 1;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .blue form button {
+    border-radius: 2px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .user-info {
+    justify-content: center;
+  }
+
+  .illustration-img {
+    margin-top: 30px;
+  }
+    
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
